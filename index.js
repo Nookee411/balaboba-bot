@@ -1,16 +1,10 @@
-import axios from 'axios';
-import fs from 'fs';
-import request from 'request';
-import TelegramBot from 'node-telegram-bot-api';
-import BalabobaService from './BalabobaService.js';
+const TelegramBot = require('node-telegram-bot-api');
+const BalabobaService = require('./BalabobaService.js');
 
 // (async () => {
 //5163025139:AAFKFzsULSPtLykbGxFtw1cQ8FPd_s8JCC0 - relaxer
 //5653348884:AAHqiSE_ip8UMHMgUQEsWtgPCho5w_x9Bd4 - bala
   const token = '5163025139:AAFKFzsULSPtLykbGxFtw1cQ8FPd_s8JCC0';
-
-  // const TelegramBot = await import ('telegram-bot-api');
-
   const bot = new TelegramBot(token, { polling: true });
 
   bot.onText(/\/bot/, (msg) => {

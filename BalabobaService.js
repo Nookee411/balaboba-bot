@@ -1,4 +1,4 @@
-import axios from "axios"
+const axios = require('axios')
 
 axios.defaults.timeout = 20000
 
@@ -21,4 +21,4 @@ const BalabobaService = {
   }
 }
 
-export default BalabobaService
+module.exports = BalabobaService
