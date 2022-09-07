@@ -10,10 +10,10 @@ const BalabobaService = {
         filter,
         intro: 6,
       });
-      if(response?.data?.bad_query || response?.data?.error)
-        return "Чуваки из яндекса не хотят, чтобы я говорил об этом.";
       if(response.status !== 200)
         return
+      if(response.data.error || response.data.bad_query)
+        return "Чуваки из яндекса не хотят, чтобы я говорил об этом.";
       return query + " " + response.data.text
     } catch (ex) {
       console.error(ex)
